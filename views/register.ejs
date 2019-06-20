@@ -1,0 +1,38 @@
+<% include partials/header %>
+
+<div class="form-wrap form-comment p-3">
+  <div class="my-1 p-3">
+    <h1 class="p-3 text-color">Sign Up</h1>
+    <p>It's free and only takes a minute</p>
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="username">Username (max 7 letters)</label>
+        <input
+          type="text"
+          maxlength="7"
+          name="username"
+          placeholder="username(must be charac from A-Z (a-z))"
+          onkeyup="lettersOnly(this)"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="password" />
+      </div>
+
+      <button type="submit" class="btn">Sign Up</button>
+      <p class="bottom-text">
+        By clicking the Sign Up button, you agree to our
+        <a href="#">Terms & Conditions</a> and
+        <a href="#">Privacy Policy</a>
+      </p>
+    </form>
+  </div>
+</div>
+<!-- JQuery CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="/js/nav.js"></script>
+<script src="/js/validation.js"></script>
+<% include partials/footer %>

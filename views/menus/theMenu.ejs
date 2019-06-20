@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+
+<!-- Section Our Menu-->
+<section id="themenu " class="p sec">
+  <div class="container">
+    <div class="text-center p-2  bg-comment">
+      <div class="text-primary">
+        <p class="letter-spacing">Our Menu</p>
+      </div>
+      <div>
+        <h2 class="m-heading text-color">
+          Enjoy Some of our Best Foods
+        </h2>
+      </div>
+      <p class="talic">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit
+      </p>
+    </div>
+  </div>
+  <div class="container py-3">
+    <div class="flexMenu p-1 no-bg">
+      <% foods.forEach(function(food){ %>
+      <div class="items">
+        <div>
+          <img src="<%= food.image %>" alt="" />
+        </div>
+
+        <div class="food">
+          <h3 class="food text-center text-color"><%=food.name%></h3>
+          <a href="/seeMenu/<%=food._id %>" class="btn">See More</a>
+        </div>
+      </div>
+      <% });%>
+    </div>
+  </div>
+</section>
+<!-- JQuery CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="/js/nav.js"></script>
+<% include ../partials/footer %>

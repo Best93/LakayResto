@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<section>
+  <div class="form-wrap form-comment p-3">
+    <div class="my-1 p-3">
+      <h1 class="p-3 text-color">Login</h1>
+
+      <form action="/login" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" placeholder="username" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="password" />
+        </div>
+
+        <button type="submit" class="btn">Log In</button>
+        <p class="bottom-text">
+          By clicking the Sign Up button, you agree to our
+          <a href="#">Terms & Conditions</a> and
+          <a href="#">Privacy Policy</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- JQuery CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="/js/nav.js"></script>
+<% include partials/footer %>

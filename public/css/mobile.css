@@ -1,0 +1,93 @@
+.flexContainer {
+  flex-direction: column;
+  margin: 0.5rem auto;
+}
+.flexIcons {
+  flex-direction: row;
+  margin: 0.3rem auto;
+}
+#who .flexContainer .who-text,
+#who .flexContainer .who-img {
+  width: 100%;
+}
+#who .flexContainer .empty {
+  display: none;
+}
+.flexFooter {
+  flex-direction: column;
+}
+.footer-about,
+.footer-contact {
+  text-align: center;
+}
+#contact {
+  flex-direction: column;
+  margin: 0.5rem auto;
+}
+m-heading {
+  font-size: 1.7rem;
+}
+.p-2 {
+  padding: 1rem;
+}
+#contact .contact-form {
+  margin: 0.5rem;
+}
+.height {
+  margin: 0;
+}
+/*Smartphones */
+
+#navbar {
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+}
+.hamburger {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+#navbar .logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+#navbar ul {
+  display: none;
+}
+
+#navbar ul.open {
+  display: block;
+  padding: 0.9rem;
+  width: 100%;
+}
+#navbar ul li {
+  line-height: 1.5;
+  color: #fff;
+  padding: 1rem 0;
+  margin: 0 0.25rem;
+  text-align: center;
+}
+#navbar ul li a {
+  width: 100%;
+}
+.l-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.slide .content {
+  bottom: -300px;
+  left: 0;
+  width: 100%;
+}
+.slide.current .content {
+  transform: translateY(-300px);
+}

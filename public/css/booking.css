@@ -1,0 +1,29 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+/* Utilities Classes */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+.bg-light {
+  background: #e67d53;
+  color: rgb(255, 254, 254);
+}
+.p-3 {
+  padding: 3rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.content {
+  margin: 0.9rem auto;
+}

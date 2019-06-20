@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<div>
+  <div class="form-wrap form-comment">
+    <h1 class="m-top text-color">Edit Comment</h1>
+
+    <form
+      id="container"
+      action="/seeMenu/<%= food_id %>/comments/<%= comment._id %>?_method=PUT"
+      method="POST"
+    >
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <input
+          type="text"
+          name="comment[text]"
+          id="comment"
+          value="<%=comment.text %>"
+        />
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- JQuery CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="/js/nav.js"></script>
+<% include ../partials/footer %>

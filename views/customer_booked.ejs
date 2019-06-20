@@ -1,0 +1,17 @@
+<% include partials/header2 %>
+
+<section class="container ">
+  <div class="p-2 content bg-light">
+    <p class="m-heading content">Thank You <%= newCustomer.name %></p>
+    <p class="m-heading content">We look foward to see you</p>
+  </div>
+
+  <div class="p-1 content">
+    <p class="content">Your Reservation for <%= newCustomer.guest %> Guest</p>
+    <p class="content">is at <%= newCustomer.time %></p>
+
+    <p class="content">
+      On <%= newCustomer.date %>
+    </p>
+  </div>
+</section>

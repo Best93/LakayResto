@@ -1,0 +1,169 @@
+.picture {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.author-comment {
+  margin: 0.1rem;
+  padding-bottom: 0.4rem;
+}
+.bg-comment {
+  background: rgb(216, 219, 219);
+}
+.btn-ejs {
+  display: inline-block;
+  color: #fff;
+  padding: 0.3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+}
+.bg-warning {
+  background: rgb(56, 230, 128);
+  color: #f4f4f4;
+}
+.bg-danger {
+  background: rgb(224, 41, 41);
+  color: #f4f4f4;
+}
+.success {
+  color: rgb(63, 163, 80);
+  background: #a2e9bf;
+}
+.danger {
+  color: rgb(241, 28, 28);
+  background: #f39b9b;
+}
+#delete-form {
+  display: inline;
+}
+.p {
+  padding-top: 6.5rem;
+}
+hr {
+  color: rgb(204, 211, 207);
+}
+.menu-content {
+  padding: 1rem;
+}
+
+.comment-content {
+  flex: 1;
+  height: 2rem;
+}
+.thumbnail {
+  background: rgb(255, 255, 255);
+  margin: 1rem;
+  box-shadow: 2px 2px 2px 2px rgb(219, 218, 230);
+}
+.right-content {
+  text-align: right;
+  padding: 0.1rem;
+  display: block;
+}
+.show-flex {
+  display: flex;
+}
+/*****************************************New Comment Form ********************/
+.m-top {
+  margin-top: 100px;
+}
+
+.form-comment {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.show-container {
+  /* 
+  -Remember, margin: auto on left and right will center a block element 
+  -I would also set a "max-width" for responsiveness
+  -May want to add some padding
+  */
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 20px;
+}
+.form-wrap {
+  /* 
+    This is the white area around the form and heading, etc
+  */
+  background: #fff;
+  padding: 15px 25px;
+}
+
+.form-wrap h1,
+.form-wrap p {
+  /* 
+    May want to center these
+  */
+  text-align: center;
+}
+
+.form-wrap .form-group {
+  /* 
+    Each label, input is wrapped in .form-group
+  */
+  margin: 20px auto;
+}
+
+.form-wrap .form-group label {
+  /* 
+    Label should be turned into a block element
+  */
+  display: block;
+}
+
+.form-wrap .form-group input {
+  /* 
+    Inputs should reach accross the .form-wrap 100% and have some padding
+  */
+  width: 100%;
+  padding: 0 15px;
+  line-height: 25px;
+}
+
+.form-wrap button {
+  /* 
+    Button should wrap accross 100% and display as block
+    Background color for button is #49c1a2
+  */
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  height: 35px;
+}
+
+.form-wrap button:hover {
+  /* 
+    Hover background color for button is #37a08e
+  */
+
+  cursor: pointer;
+}
+
+.form-wrap .bottom-text {
+  /* 
+    Bottom text is smaller
+  */
+  font-size: 15px;
+  padding: 10px;
+  margin: 5px;
+}
+.footer-form {
+  /* 
+  Should be centered
+ */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-form a {
+  /* 
+    Footer link color is #49c1a2
+  */
+  color: #49c1a2;
+}

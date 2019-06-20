@@ -1,0 +1,57 @@
+<% include ../partials/header %>
+
+<section class=" p container">
+  <div class="show-container thumbnail">
+    <div class="text-center">
+      <img class="picture" src="<%= food.image %>" />
+    </div>
+    <div>
+      <h4 class="right-content" id="price">$<%= food.price %></h4>
+      <h4 class="text-primary "><%= food.name %></h4>
+      <p><%=food.description %></p>
+    </div>
+  </div>
+
+  <div class="show-container bg-comment">
+    <div>
+      <p>
+        <a class="btn" href="/seeMenu/<%= food._id %>/comments/new"
+          >Add New Comment</a
+        >
+      </p>
+
+      <hr />
+    </div>
+
+    <div>
+      <%food.comments.forEach(function(comment){%>
+      <div class="show-flex">
+        <div class="comment-content">
+          <p><strong><%= comment.author.username %></strong></p>
+        </div>
+        <div class="comment-content right-content"><p></p></div>
+      </div>
+      <p class="author-comment"><%= comment.text %></p>
+
+      <% if (currentUser && comment.author.id.equals(currentUser._id)){ %>
+      <a
+        class="btn-ejs bg-warning"
+        href="/seeMenu/<%= food._id%>/comments/<%=comment._id %>/edit"
+        >Edit</a
+      >
+      <form
+        id="delete-form"
+        action="/seeMenu/<%= food._id%>/comments/<%=comment._id %>?_method=DELETE"
+        method="POST"
+      >
+        <input type="submit" class="btn-ejs bg-danger" value="Delete" />
+      </form>
+      <%} %> <% }) %>
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/js/nav.js"></script>
+
+<% include ../partials/footer %>

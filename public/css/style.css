@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utilities Classes */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.iconContainer {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  padding-top: 2px;
+}
+.flexContainer {
+  display: flex;
+  margin: 0.5rem auto;
+  flex-wrap: wrap;
+}
+
+.flexIcons {
+  display: flex;
+  margin: 0.5rem auto;
+}
+.height {
+  margin: 3rem;
+}
+.letter-spacing {
+  letter-spacing: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-primary {
+  color: rgb(238, 158, 111);
+}
+.text-color {
+  color: rgb(61, 61, 61);
+}
+.text-secondary {
+  color: rgb(255, 255, 255);
+}
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
+}
+
+.bg-primary {
+  background: rgba(207, 202, 202, 0.993);
+  color: rgb(68, 66, 66);
+}
+.no-bg {
+  background: #fff;
+}
+.talic {
+  font-style: italic;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+.s-heading {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  line-height: 0.1;
+  color: rgb(238, 158, 111);
+  font-weight: 900;
+}
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.py-top {
+  padding-top: 0.3rem;
+}
+.py-1 {
+  padding: 1.5rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.px-1 {
+  padding: 0 1.5rem;
+}
+.px-2 {
+  padding: 0 2rem;
+}
+.px-3 {
+  padding: 0 3rem;
+}
+.p-1 {
+  padding: 1.5rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: rgb(238, 158, 111);
+  padding: 0.5rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: rgb(255, 127, 58);
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+.border {
+  border-radius: 50%;
+  border: 2px solid rgb(114, 114, 113);
+}
+.lg-border {
+  border: 2px solid rgb(238, 158, 111);
+}
+/*Navbar */
+.hamburger {
+  display: none;
+}
+#navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  background: #333;
+  color: #fff;
+  z-index: 2;
+  padding: 1rem;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background: rgb(238, 158, 111);
+  border-radius: 5px;
+}
+#navbar .logo {
+  border-bottom: #fff 2px solid;
+  border-top: #fff 2px solid;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/*Showcase */
+#showcase {
+  background: #333 url("../img/showcase.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  /*Overlay*/
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Section: Who We Are */
+#who .flexContainer .who-text,
+#who .flexContainer .who-img,
+#who .flexContainer .empty {
+  width: 50%;
+}
+
+#who .flexContainer .who-img img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+/*Section: Gallery */
+#gallery {
+  line-height: 1.6;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+.buttons {
+  position: relative;
+}
+.buttons button#next {
+  position: absolute;
+  top: -400px;
+  right: 15px;
+}
+.buttons button#prev {
+  position: absolute;
+  top: -400px;
+  left: 15px;
+}
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  outline: none;
+}
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+/*Background images*/
+
+.slide:first-child {
+  background: url("../img/gallery1.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+  background: url("../img/gallery2.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(3) {
+  background: url("../img/gallery3.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(4) {
+  background: url("../img/gallery4.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(5) {
+  background: url("../img/gallery5.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(6) {
+  background: url("../img/gallery6.jpg") no-repeat center top/cover;
+}
+
+/*Section: Booking Tables*/
+.flexBooking {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+}
+#booking .bookedTime,
+#booking .bookedName,
+#booking .bookedGuest,
+#booking .bookedPhone {
+  flex: 1;
+  margin: 1.5rem;
+}
+
+.box {
+  border: #ccc solid 1px;
+  background: #f4f4f4;
+  padding: 1rem;
+}
+.bg-booking {
+  background: #333 url("../img/booking.jpg") no-repeat center center/cover;
+  color: #fff;
+}
+
+.bg-booking #bookingContent {
+  padding: 1.5rem;
+  margin: 0 auto;
+  height: 100%;
+  /*Overlay*/
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#booking .booking-form .form-group {
+  max-width: 650px;
+  margin: 1rem auto;
+}
+#booking .booking-form .form-group input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0 auto;
+  background: #ccc;
+  border: none;
+}
+
+/*Section Contact */
+
+/* Used those properties to affect the hours boxes from booking section for equal dimension */
+#contact .contact-form,
+#contact .restoInfo,
+.flexContainer .box {
+  flex: 1;
+  margin: 1.5rem;
+}
+#contact .contact-form .form-group {
+  margin: 2.5rem auto;
+}
+
+#contact .contact-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px rgb(104, 103, 103) solid;
+}
+
+form input.btn.btn-dark {
+  font-size: 1.2rem;
+}
+input,
+textarea {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+section#contact.p-2 div div div div a i:hover {
+  background-color: rgb(238, 150, 92);
+  color: rgb(253, 249, 249);
+}
+
+/*Section -Our Menu */
+.flexMenu {
+  display: flex;
+  margin: 0.5rem 1.5rem;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.container .flexMenu .items {
+  flex-basis: 300px;
+  background: rgb(255, 255, 255);
+  margin: 1rem;
+  box-shadow: 2px 2px 2px 2px rgb(219, 218, 230);
+}
+
+.container .flexMenu .items img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.food {
+  padding: 0.9rem;
+}
+
+/* Section footer */
+.flexFooter {
+  display: flex;
+  justify-content: space-around;
+}
+#footer div div div a i:hover {
+  background: rgb(156, 153, 153);
+  color: #fff;
+}

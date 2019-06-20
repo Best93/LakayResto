@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div>
+  <div class="form-wrap form-comment">
+    <h1 class="m-top text-color">Add New Comments to <%= food.name%></h1>
+    <p>It's free and only takes a minute</p>
+    <form
+      id="container"
+      action="/seeMenu/<%=food._id %>/comments"
+      method="POST"
+    >
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <input
+          type="text"
+          name="comment[text]"
+          id="comment"
+          placeholder="Enter comment"
+        />
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+      <p class="bottom-text">
+        By clicking the Sign Up button, you agree to our
+        <a href="#">Terms & Conditions</a> and
+        <a href="#">Privacy Policy</a>
+      </p>
+    </form>
+  </div>
+  <div class="footer-form">
+    <p>Already have an account? <a href="#">Login Here</a></p>
+  </div>
+</div>
+<!-- JQuery CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="/js/nav.js"></script>
+<% include ../partials/footer %>

@@ -1,0 +1,23 @@
+#contact .contact-form,
+#contact .restoInfo {
+  flex: 1;
+  margin: 1.5rem;
+}
+#contact .contact-form .form-group {
+  margin: 0.65rem;
+}
+#contact .contact-form label {
+  display: block;
+}
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+.restoInfo ul li .item-info {
+  padding: 0 2.5rem;
+  margin: 0;
+}
+.restoInfo ul li {
+  margin-bottom: 2.5rem;
+}
