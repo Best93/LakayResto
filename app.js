@@ -21,20 +21,13 @@ var commentsRoutes = require("./routes/comments"),
 /*mongoose.connect("mongodb://localhost:27017/resto_Menu", {
   useNewUrlParser: true
 });*/
-mongoose
-  .connect(
-    "mongodb+srv://resto:Bestrudolph@cluster0-pjqix.mongodb.net/test?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useCreateIndex: true
-    }
-  )
-  .then(() => {
-    console.log("Coonected to DB");
-  })
-  .catch(err => {
-    console.log("ERROR", err.message);
-  });
+mongoose.connect(
+  "mongodb+srv://resto:Bestrudolph@cluster0-pjqix.mongodb.net/test?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useCreateIndex: true
+  }
+);
 
 // Avoid deprecation warnings
 mongoose.set("useFindAndModify", false);
