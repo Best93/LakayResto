@@ -17,6 +17,7 @@ var commentsRoutes = require("./routes/comments"),
   menuRoutes = require("./routes/menus"),
   indexRoutes = require("./routes/index");
 
+var port = process.env.PORT || 3000;
 //connect to mongodb
 /*mongoose.connect("mongodb://localhost:27017/resto_Menu", {
   useNewUrlParser: true
@@ -78,6 +79,6 @@ app.use("/seeMenu/:id/comments", commentsRoutes);
 app.set("view engine", "ejs");
 
 // check for server port
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("Server just started");
 });
