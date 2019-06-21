@@ -20,6 +20,10 @@
   box-sizing: border-box;
   font-size: 1rem;
 }
+form input.btn-ejs {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .bg-warning {
   background: rgb(56, 230, 128);
   color: #f4f4f4;
