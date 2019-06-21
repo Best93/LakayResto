@@ -20,8 +20,10 @@ var commentsRoutes = require("./routes/comments"),
 //set up port
 var port = process.env.PORT || 3000;
 
+// create a default environment
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/resto_Menu";
 //connect to mongodb
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true
 });
