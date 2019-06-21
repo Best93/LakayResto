@@ -31,10 +31,12 @@
 .success {
   color: rgb(63, 163, 80);
   background: #a2e9bf;
+  font-size: 1rem;
 }
 .danger {
   color: rgb(241, 28, 28);
   background: #f39b9b;
+  font-size: 1rem;
 }
 #delete-form {
   display: inline;
