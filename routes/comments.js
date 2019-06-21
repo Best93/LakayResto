@@ -36,13 +36,18 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
           comment.author.username = req.user.username;
 
           //save comment
-          comment.save(function(err) {
+          comment.save();
+          
             food.comments.push(comment);
-            food.save(function(err) {
+            food.save();
               req.flash("Successfully added comment");
               res.redirect("/seeMenu/" + food._id);
-            });
-          });
+           
+         
+
+
+
+
         }
       });
     }
