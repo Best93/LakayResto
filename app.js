@@ -18,9 +18,23 @@ var commentsRoutes = require("./routes/comments"),
   indexRoutes = require("./routes/index");
 
 //connect to mongodb
-mongoose.connect("mongodb://localhost:27017/resto_Menu", {
+/*mongoose.connect("mongodb://localhost:27017/resto_Menu", {
   useNewUrlParser: true
-});
+});*/
+mongoose
+  .connect(
+    "mongodb+srv://resto:Bestrudolph@cluster0-pjqix.mongodb.net/test?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true
+    }
+  )
+  .then(() => {
+    console.log("Coonected to DB");
+  })
+  .catch(err => {
+    console.log("ERROR", err.message);
+  });
 
 // Avoid deprecation warnings
 mongoose.set("useFindAndModify", false);
