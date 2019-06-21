@@ -20,18 +20,11 @@ var commentsRoutes = require("./routes/comments"),
 //set up port
 var port = process.env.PORT || 3000;
 
-console.log(process.env.DATABASEURL);
 //connect to mongodb
 mongoose.connect(process.env.DATABASEURL, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useCreateIndex: true
 });
-/*mongoose.connect(
-  "mongodb+srv://resto:Bestrudolph@cluster0-pjqix.mongodb.net/test?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useCreateIndex: true
-  }
-);*/
 
 // Avoid deprecation warnings
 mongoose.set("useFindAndModify", false);
