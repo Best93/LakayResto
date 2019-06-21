@@ -6,9 +6,9 @@
       <img class="picture" src="<%= food.image %>" />
     </div>
     <div>
-      <h4 class="right-content" id="price">$<%= food.price %></h4>
+      <h4 class="right-content text-color" id="price">$<%= food.price %></h4>
       <h4 class="text-primary "><%= food.name %></h4>
-      <p><%=food.description %></p>
+      <p class="text-color"><%=food.description %></p>
     </div>
   </div>
 
@@ -27,11 +27,13 @@
       <%food.comments.forEach(function(comment){%>
       <div class="show-flex">
         <div class="comment-content">
-          <p><strong><%= comment.author.username %></strong></p>
+          <p class="text-color">
+            <strong><%= comment.author.username %></strong>
+          </p>
         </div>
         <div class="comment-content right-content"><p></p></div>
       </div>
-      <p class="author-comment"><%= comment.text %></p>
+      <p class="author-comment text-color"><%= comment.text %></p>
 
       <% if (currentUser && comment.author.id.equals(currentUser._id)){ %>
       <a
