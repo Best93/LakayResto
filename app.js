@@ -17,18 +17,21 @@ var commentsRoutes = require("./routes/comments"),
   menuRoutes = require("./routes/menus"),
   indexRoutes = require("./routes/index");
 
+//set up port
 var port = process.env.PORT || 3000;
+
+console.log(process.env.DATABASEURL);
 //connect to mongodb
-/*mongoose.connect("mongodb://localhost:27017/resto_Menu", {
+mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true
-});*/
-mongoose.connect(
+});
+/*mongoose.connect(
   "mongodb+srv://resto:Bestrudolph@cluster0-pjqix.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useCreateIndex: true
   }
-);
+);*/
 
 // Avoid deprecation warnings
 mongoose.set("useFindAndModify", false);
