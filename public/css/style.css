@@ -389,7 +389,8 @@ p {
   margin: 2.5rem auto;
 }
 
-#contact .contact-form input {
+#contact .contact-form input,
+#contact .contact-form textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px rgb(104, 103, 103) solid;
@@ -402,8 +403,6 @@ input,
 textarea {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  width: 100%;
-  padding: 1.3rem;
 }
 
 section#contact.p-2 div div div div a i:hover {
