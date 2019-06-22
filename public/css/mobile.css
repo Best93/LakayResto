@@ -22,7 +22,7 @@
 }
 #contact {
   flex-direction: column;
-  margin: 0.5rem auto;
+  margin: 0 auto;
 }
 m-heading {
   font-size: 1.7rem;
