@@ -139,6 +139,7 @@ hr {
   display: block;
   margin: 20px auto;
   height: 35px;
+  font-size: 1rem;
 }
 
 .form-wrap button:hover {

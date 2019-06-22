@@ -6,6 +6,7 @@ var express = require("express"),
   passport = require("passport"),
   methodOverride = require("method-override"),
   LocalStrategy = require("passport-local"),
+  mailgun = require("mailgun-js"),
   Menu = require("./models/menu"),
   Customer = require("./models/customer"),
   Comment = require("./models/comment"),
@@ -15,6 +16,7 @@ var express = require("express"),
 //require routes
 var commentsRoutes = require("./routes/comments"),
   menuRoutes = require("./routes/menus"),
+  emailRoutes = require("./routes/email"),
   indexRoutes = require("./routes/index");
 
 //set up port
@@ -71,6 +73,7 @@ app.use(function(req, res, next) {
 // simplify routes
 app.use("/", indexRoutes);
 app.use("/seeMenu", menuRoutes);
+app.use("/contact", emailRoutes);
 app.use("/seeMenu/:id/comments", commentsRoutes);
 
 //tell express that we using ejs file therefore no need to ejs when rendering templates

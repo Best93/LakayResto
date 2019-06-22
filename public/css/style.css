@@ -402,6 +402,8 @@ input,
 textarea {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 1.3rem;
 }
 
 section#contact.p-2 div div div div a i:hover {
