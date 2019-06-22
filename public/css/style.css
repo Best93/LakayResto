@@ -405,7 +405,7 @@ textarea {
   font-family: "Roboto", sans-serif;
 }
 
-section#contact.p-2 div div div div a i:hover {
+section#contact.p div div div div a i:hover {
   background-color: rgb(238, 150, 92);
   color: rgb(253, 249, 249);
 }
