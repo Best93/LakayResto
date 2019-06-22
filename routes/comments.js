@@ -37,17 +37,11 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
 
           //save comment
           comment.save();
-          
-            food.comments.push(comment);
-            food.save();
-              req.flash("Successfully added comment");
-              res.redirect("/seeMenu/" + food._id);
-           
-         
 
-
-
-
+          food.comments.push(comment);
+          food.save();
+          req.flash("success", "Successfully added comment");
+          res.redirect("/seeMenu/" + food._id);
         }
       });
     }
