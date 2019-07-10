@@ -25,7 +25,7 @@ router.post("/", function(req, res) {
     if (error) {
       res.send("Mail not Sent");
     } else {
-      res.send("Mail sent");
+      res.render("email");
     }
   });
 });
