@@ -47,6 +47,7 @@ app.use(flash());
 
 //seedDB(); // seed db
 
+// use moment js for comment time
 app.locals.moment = require("moment");
 // PASSPORT CONFIGURATION
 app.use(
